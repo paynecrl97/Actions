@@ -1,5 +1,5 @@
 #!/bin/sh
 
-echo $INPUT_WHO-TO-GREET
+echo $1
 
 orgflow --version
