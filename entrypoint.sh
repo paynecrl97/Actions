@@ -1,1 +1,3 @@
+#!/bin/sh
+
 orgflow --version
