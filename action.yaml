@@ -1,5 +1,8 @@
 name: 'Hello World'
 description: 'Greet someone'
+branding:
+  icon: 'cloud'  
+  color: 'red'
 inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
@@ -10,9 +13,8 @@ outputs:
     description: "Random number"
     value: ${{ steps.random-number-generator.outputs.random-id }}
 runs:
-  using: "composite"
-  container: 
-    image: orgflow/cli:latest
+  using: 'docker'
+  image: 'docker://orgflow/cli:latest'
   steps:
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
