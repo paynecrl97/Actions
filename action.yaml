@@ -14,5 +14,5 @@ outputs:
     value: ${{ steps.random-number-generator.outputs.random-id }}
 runs:
   using: 'docker'
-  image: 'docker://orgflow/cli:latest'
-  entrypoint: 'action.sh'
+  image: 'Dockerfile'
+  #entrypoint: 'action.sh'
